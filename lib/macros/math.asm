@@ -14,12 +14,12 @@
 }
 
 !macro sub16nc a, b, c {
-  lda a+1
-  sbc b+1
-  sta c+1
   lda a
   sbc b
   sta c
+  lda a+1
+  sbc b+1
+  sta c+1
 }
 
 !macro sub16 a, b, c {
@@ -33,8 +33,8 @@
 }
 
 !macro sub32 a, b, c {
-  +sub16    a+2, b+2, c+2
-  +sub16nc  a, b, c
+  +sub16      a, b, c
+  +sub16nc    a+2, b+2, c+2
 }
 
 !macro neg32 src, dst {
