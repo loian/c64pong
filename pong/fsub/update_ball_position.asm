@@ -39,8 +39,8 @@ keep_x_speed2
             bcc keep_y_speed
 
             ; y - $e0
-            ;+sub32 ball_y, ylim, r1
-            ;+sub32 ylim, r1, ball_y
+            +sub32 ball_y, ylim, r1
+            +sub32 ylim, r1, ball_y
             +neg32 ball_y_speed, ball_y_speed
 keep_y_speed
 
