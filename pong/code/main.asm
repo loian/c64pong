@@ -50,6 +50,7 @@ irq        dec $d019          ; acknowledge IRQ / clear register for next interr
           jsr WaitSpace
 
            jsr update_ball    ; move ship
+           jsr play_sound     ; plays sound effects.
            ;jsr check_keyboard ; check keyboard controls
 
 

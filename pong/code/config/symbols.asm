@@ -2,17 +2,6 @@
 ; setting up some general symbols we use in our code
 ;================================================================
 
-ints     = 4
-
-ball_x     = $200
-ball_y     = ball_x + ints
-
-ball_x_speed = ball_y + ints
-ball_y_speed = ball_x_speed + ints
-
-ball_x_acc = ball_y_speed + ints
-ball_y_acc = ball_x_acc + ints
-
 ;============================================================
 ; symbols
 ;============================================================
@@ -32,3 +21,9 @@ sprite0_addr   = $07f8
 ; coords
 sprite0_x_coord = $d000
 sprite0_y_coord = $d001
+
+VIC_IRR         = $D019     ; Vic interrupt request register
+VIC_BORDER_COL  = $D020
+
+; SID
+sid	            = $D400

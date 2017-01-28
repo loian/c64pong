@@ -28,13 +28,6 @@ address_sid = $1001
 * = address_sprites
 !bin "sprites/ball.bin",64
 
-!byte 00, 00, 60, 00  ; ball_x
-!byte 00, 00, 50, 00 	; ball_y
-!byte 00, 00, 00, 00 	; ball_x_speed
-!byte 00, 00, 00, 00	; ball_y_speed
-!byte 00, 00, 00, 00	; ball_x_acc
-!byte 00, 40, 00, 00	; ball_y_acc
-
 * = address_sid
 ; !bin "resources/empty_1000.sid",, $7c+2
 
@@ -45,7 +38,6 @@ address_sid = $1001
 ; Code starts at $c000
 ;============================================================
 * = $c000
-
 !source "code/init/sprites.asm"
 
 ;============================================================
@@ -57,3 +49,4 @@ address_sid = $1001
 !source "fsub/space_press.asm"
 !source "fsub/sub_clear_screen.asm"
 !source "fsub/update_ball_position.asm"
+!source "fsub/play_sound.asm"

@@ -1,8 +1,8 @@
 ;============================================================
 ; detect space pressed
 ;============================================================
-
 WaitSpace
+rts
             LDA $CB
             CMP #$24  ;Scancode for SPACE
             BNE CheckN

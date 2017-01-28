@@ -51,10 +51,3 @@ sprite_color_1  	= $01
 
   lda #sprite_color_1 	 ; sprite color
   sta $d025
-
-  ldy #23
-cp_ram
-  lda address_sprites+64, y
-  sta ball_x, y
-  dey
-  bpl cp_ram
