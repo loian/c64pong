@@ -7,7 +7,7 @@ rts
             CMP #$24  ;Scancode for SPACE
             BNE CheckN
 
-            LDA #$02
+            LDA #$03
             STA ball_x_speed + 2
             RTS
 
@@ -16,7 +16,7 @@ CheckN
             CMP #$27  ;Scancode for SPACE
             BNE ReleaseKey
 
-            LDA #$FE
+            LDA #$FD
             STA ball_x_speed + 2
             LDA #$FF
             STA ball_x_speed + 3
